@@ -12,18 +12,16 @@ function Tarjetas({ titulo, descripcion, estado = 'Pendiente', principal = false
                 <span className={estilos.insignia}>
                     Modulo central
                 </span>
+
             )}
+
+            <p className={estilos.estado}>
+                Estado: {estado}
+            </p>
             
         
 
         </article>
     
-    )
-}
-
-    return (
-    <div>
-        
-    </div>
     )
 }
