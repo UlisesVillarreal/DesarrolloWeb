@@ -10,6 +10,12 @@
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
+    background-color: #fff8ee;
+}
+
+.titulo {
+    color: #B8862C;
+    font-family: Georgia, 'Times New Roman', Times, serif
 
 }
 
@@ -73,4 +79,5 @@
     grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     gap: 25px;
     
+    color: #a3864e;
 }
