@@ -26,21 +26,21 @@ export default function Main() {
             </h2>
             
             <div className={estilos.tarjetas}>
-              <Tarjetas 
+              <Tarjeta
                 titulo="Control de jornada laboral"
                 descripcion="Permitira registrar la hora de entrada y salida de cada empleado."
-                princial
+                principal
                 
             />
 
-            <Tarjeta 
+            <Tarjeta
                 titulo="Servicios realizados y pagos diarios."
                 descripcion="Permitira registrar los servicios realizados por cada empleado y calcular el porcentaje correspondiente a su pago."
                 estado="En desarrollo"
             
             />
 
-            <Tarjeta 
+            <Tarjeta
               titulo="Aguinaldo"
               descripcion="Permitira realizar el calculo del aguinaldo correspondiente a cada empleado."
 
