@@ -25,10 +25,3 @@ function Tarjetas({ titulo, descripcion, estado = 'Pendiente', principal = false
     
     )
 }
-
-    return (
-    <div>
-        
-    </div>
-    )
-}
