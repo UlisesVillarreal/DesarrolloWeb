@@ -1,0 +1,30 @@
+.tarjeta {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 25px;
+    text-align: center;
+
+}
+
+.destacada {
+    border-color: var(--principal);
+    border-width: 2px;
+
+}
+
+.insignia {
+    display: inline-block;
+    background-color: var(--dorado);
+    color: var(--blanco);
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+
+}
+
+.estado {
+    color: var(--textoSecundario);
+    font-size: 0.85rem;
+}
+

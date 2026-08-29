@@ -1,0 +1,76 @@
+.contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 30px;
+
+}
+
+.presentacion {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.subtitulo {
+    color: var(--texto);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+
+}
+
+.bienvenida {
+    color: var(--texto);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.titulo {
+    color:var(--principal);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 10px 0 20px;
+
+}
+
+.linea {
+    width: 120px;
+    height: 2px;
+    background-color: var(--dorado);
+    margin: 25px auto;
+
+}
+
+.descripcion {
+    max-width: 750px;
+    margin: 15px auto;
+    color: var(--textoSecundario);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.seccionTarjetas {
+    margin-top: 40px;
+
+}
+
+.tituloTarjetas {
+    text-align: center;
+    color: var(--texto);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    
+}
+
+.modulosTarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 25px;
+    
+}
