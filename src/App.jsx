@@ -2,14 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import Main from './components/main/Main'
 import Footer from './components/footer/Footer'
-import NavbarEmpleados from './components/navbarEmpleados/NavbarEmpleados'
+import NavbarAdmin from './components/navbarAdmin/NavbarAdmin'
 
 function App() {
   
 
   return (
     <>
-      <NavbarEmpleados/>
+      <NavbarAdmin/>
       <Main/>
       <Footer/>
     </>

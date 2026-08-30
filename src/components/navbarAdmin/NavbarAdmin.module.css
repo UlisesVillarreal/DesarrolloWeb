@@ -1,0 +1,67 @@
+/* Navbar */
+* {
+    padding: 0px;
+    margin: 0px;
+    color: #3B2B1D;
+}
+
+.header{
+    display: flex;
+    border: 2px #d4af37ee solid;
+    border-radius: 10px;
+    margin: 0.3%;
+    padding: 0 1%;
+    background-color: #F0E4CC;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logoNavbar {
+    padding: 0.3% 0;
+    flex: 1;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3A2E2B;
+    letter-spacing: 2px;
+}
+.logoNavbar span {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+}
+
+.navbar {
+    flex: 1;  
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration-line: none;
+}
+
+.navbar li strong:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 10px #B8862C;
+}
+
+.perfil {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+.perfil img {
+    width: 15%;
+}
+
+.desabilitado { 
+    cursor: not-allowed;       /* Muestra el ícono de "prohibido" */
+    pointer-events: none;      /* EVITA QUE SE HAGA CLIC */
+}
