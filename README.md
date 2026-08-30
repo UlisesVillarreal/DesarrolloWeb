@@ -1,16 +1,26 @@
-# React + Vite
+# Sistema de gestion de Sueldos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Temple Estetique
 
-Currently, two official plugins are available:
+### Integrantes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Amerise Román, Camila Belén 
+- Colque, Micaela Tania
+- Sánchez, Pablo 
+- Suares, Marisa Sofía
+- Villarreal, Maximiliano Ulises
 
-## React Compiler
+### Descripción:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este sistema se está desarrollando para una estética llamada **TEMPLE ESTETIQUE** con la finalidad de brindar a la administracion un medio sensillo y semiautomático de gestionar los servicios e ingresos de cada uno de los empleados de la misma, ademas de tener un registro de asistencias y un calculo automatico de aguinaldos.
+Por otra parte, también permite a los empleados poder consultar en cualquier momento los ingresos efectuados durante sus jornadas y su correspondiente aguinaldo de forma transparente.
 
-## Expanding the ESLint configuration
+### Comandos para ejecutar el proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **nmp install**
+
+2. **npm run dev**
+
+### Proyecto en funcionamiento:
+
+![Página piloto principal . interfaz de administrador](src/assets/pagRunning.png)
