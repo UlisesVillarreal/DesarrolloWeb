@@ -8,7 +8,8 @@ export default function NavbarEmpleados() {
       {/* logo */}
 
       <div className={estilos.logoNavbar}>
-        TEMPLE <span>ESTÉTIQUE</span>
+        <img src="./src/assets/Logo.png" alt="logo" />
+        <p>TEMPLE <span>ESTÉTIQUE</span></p>
       </div>
 
       {/* navbar */}

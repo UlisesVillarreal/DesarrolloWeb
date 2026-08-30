@@ -17,13 +17,17 @@
 
 }
 
+/* logo */
 .logoNavbar {
     padding: 0.3% 0;
+    display: flex;
     flex: 1;
     font-weight: bold;
     font-size: 20px;
     color: #3A2E2B;
     letter-spacing: 2px;
+    align-items: center;
+    gap: 2%;
 }
 .logoNavbar span {
     padding: 5px;
@@ -57,9 +61,9 @@
     align-items: center;
 
 }
-.perfil img {
-    width: 15%;
-}
+.perfil img, .logoNavbar img {
+    width: 10%;
+}   
 
 .desabilitado { 
     cursor: not-allowed;       /* Muestra el ícono de "prohibido" */
