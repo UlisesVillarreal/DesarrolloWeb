@@ -34,24 +34,23 @@ export default function Main() {
         </h2>
           
         <div className={estilos.tarjetas}>
+
           <Tarjeta
-            titulo="Control de jornada laboral"
+            titulo="Jornada"
             descripcion="Permitira registrar la hora de entrada y salida de cada empleado."
             principal
             
           />
 
           <Tarjeta
-            titulo="Servicios realizados y pagos diarios"
-            descripcion="Permitira registrar los servicios realizados por cada empleado y calcular el porcentaje correspondiente a su pago."
+            titulo="Servicios"
+            descripcion="Permitira registrar los servicios realizados por cada empleado y el monto del mismo para que el sistema calcule su correspondiente comisión."
             estado="En desarrollo"
-        
           />
 
           <Tarjeta
-            titulo="Aguinaldo"
-            descripcion="Permitira realizar el calculo del aguinaldo correspondiente a cada empleado."
-
+            titulo="Consultas"
+            descripcion="Permite consultar información de cada empleados: Ingresos generados, Comisiones Correspondientes, Asistencias y Aguinaldo"
           />
         
         </div>

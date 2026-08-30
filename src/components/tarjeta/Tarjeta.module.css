@@ -1,10 +1,15 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 .tarjeta {
     background-color: #F0E4CC;
     border: 4px solid #d4af37ee;
     border-radius: 12px;
-    padding: 25px;
+    justify-content: center;
     text-align: center;
-    min-height: 200px;
+    padding: 10%;
 }
 
 .tarjeta h3 {
