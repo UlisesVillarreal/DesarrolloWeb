@@ -1,0 +1,56 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    color: #3B2B1D;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5%;
+    border-top: 2px #d4af37ee solid;
+    background-color: antiquewhite;
+}
+
+/* logo */
+.logo {
+    flex: 1;
+}
+
+.logo img{
+    width:15%;
+
+}
+
+/* integrantes */
+.datosIntegrantes {
+    flex: 1;
+}
+
+.datosIntegrantes ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center    ;
+}
+
+.datosIntegrantes ul li{
+    list-style: none;
+    
+}
+
+/* instituto */
+.datosInstituto {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+.datosInstituto ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.datosInstituto li {
+    list-style: none;
+}
