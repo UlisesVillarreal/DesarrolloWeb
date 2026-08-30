@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/navbar/Navbar'
 import Main from './components/main/Main'
 import Footer from './components/footer/Footer'
+import NavbarAdmin from './components/navbarAdmin/NavbarAdmin'
 
 function App() {
   
 
   return (
     <>
-      <Navbar/>
+      <NavbarAdmin/>
       <Main/>
       <Footer/>
     </>
