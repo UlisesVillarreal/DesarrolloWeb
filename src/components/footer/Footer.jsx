@@ -13,7 +13,7 @@ export default function Footer() {
       {/* integrantes */}
       <section className={estilos.datosIntegrantes}>
         <ul>
-          <li>Amerise Román, Camila Belén || Colque, Micaela Tania</li>
+          <li>Amerise Román, Camila Belén || Colque, Tania Micaela</li>
           <li>Sánchez, Pablo || Suares, Marisa Sofía</li>
           <li>Villarreal, Maximiliano Ulises</li>
         </ul>

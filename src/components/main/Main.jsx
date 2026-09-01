@@ -39,18 +39,19 @@ export default function Main() {
             titulo="Jornada"
             descripcion="Permitira registrar la hora de entrada y salida de cada empleado."
             principal
-            
+            estado="Pendiente"
           />
 
           <Tarjeta
             titulo="Servicios"
             descripcion="Permitira registrar los servicios realizados por cada empleado y el monto del mismo para que el sistema calcule su correspondiente comisión."
-            estado="En desarrollo"
+            estado="Pendiente"
           />
 
           <Tarjeta
             titulo="Consultas"
             descripcion="Permite consultar información de cada empleados: Ingresos generados, Comisiones Correspondientes, Asistencias y Aguinaldo"
+            estado="Pendiente"
           />
         
         </div>
