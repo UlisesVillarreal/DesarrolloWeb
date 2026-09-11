@@ -1,9 +1,79 @@
-import React from 'react'
+import React, { useState } from 'react'
 import estilos from './Main.module.css'
-import Tarjeta from '../tarjeta/tarjeta'
+import Tarjeta from '../tarjeta/Tarjeta'
 import imagenEstetica from '../../assets/temple_estetique.png'
 
+const servicios = [
+  {
+    id: 1,
+    nombre: "Limpieza Facial",
+    categoria: "Facial",
+    precio: 15000,
+    duracion: 60,
+    estado: "Disponible"
+  },
+  {
+    id: 2,
+    nombre: "Masaje Relajante",
+    categoria: "Masaje",
+    precio: 20000,
+    duracion: 45,
+    estado: "Disponible"
+  },
+  {
+    id: 3,
+    nombre: "Depilacion Facial",
+    categoria: "Depilacion",
+    precio: 12000,
+    duracion: 30,
+    estado: "Disponible"
+  },
+  {
+    id: 4,
+    nombre: "Limpieza Facial",
+    categoria: "Facial",
+    precio: 15000,
+    duracion: 60,
+    estado: null
+  },
+  {
+    id: 5,
+    nombre: "Masaje corporal",
+    categoria: "Masaje",
+    precio: 0,
+    duracion: 50,
+    estado: "Disponible"
+  },
+  {
+    id: 6,
+    nombre: "Tratamiento corporal",
+    categoria: "corporal",
+    precio: 25000,
+    duracion: 90,
+    estado: "No disponible"
+  }
+]
+
+
 export default function Main() {
+  
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todos")
+  const [orden, setOrden] = useState("ninguno")
+  const serviciosFiltrados = servicios.filter((servicio) => {
+    if (categoriaSeleccionada === "Todos") {
+      return true
+    }
+    return servicio.categoria === categoriaSeleccionada
+  })
+  const serviciosOrdenados = [...serviciosFiltrados].sort((a, b) => {
+    if (orden === "menor") {
+      return a.precio - b.precio
+    }
+    if (orden === "mayor") {
+      return b.precio - a.precio
+    }
+    return 0
+  })
   return (
     <main className={estilos.contenido}>
       <section className={estilos.presentacion}>
@@ -32,28 +102,46 @@ export default function Main() {
         <h2 className={estilos.tituloTarjetas}>
           Modulos 
         </h2>
-          
+        <div>
+          <label>
+            Categoria:
+            <select
+              value={categoriaSeleccionada}
+              onChange={(e) => setCategoriaSeleccionada(e.target.value)}
+            >
+              <option value="Todos">Todos</option>
+              <option value="Facial">Facial</option>
+              <option value="Masaje">Masaje</option>
+              <option value="Depilacion">Depilacion</option>
+              <option value="corporal">Corporal</option>
+            </select>
+          </label>
+
+          <label>
+            Ordenar:
+            <select
+              value={orden}
+              onChange={(e) => setOrden(e.target.value)}
+            >
+              <option value="ninguno">Sin Orden</option>
+              <option value="menor">Precio menor a mayor</option>
+              <option value="mayor">Precio mayor a menor</option>
+            </select>
+          </label>
+        </div>
+
         <div className={estilos.tarjetas}>
+          {serviciosOrdenados.map((servicio) => ( 
+            <Tarjeta
+              key={servicio.id}
+              nombre={servicio.nombre}
+              categoria={servicio.categoria}
+              precio={servicio.precio}
+              duracion={servicio.duracion}
+              estado={servicio.estado}
+            />
+          ))}
 
-          <Tarjeta
-            titulo="Jornada"
-            descripcion="Permitira registrar la hora de entrada y salida de cada empleado."
-            principal
-            estado="Pendiente"
-          />
-
-          <Tarjeta
-            titulo="Servicios"
-            descripcion="Permitira registrar los servicios realizados por cada empleado y el monto del mismo para que el sistema calcule su correspondiente comisión."
-            estado="Pendiente"
-          />
-
-          <Tarjeta
-            titulo="Consultas"
-            descripcion="Permite consultar información de cada empleados: Ingresos generados, Comisiones Correspondientes, Asistencias y Aguinaldo"
-            estado="Pendiente"
-          />
-        
         </div>
 
 
