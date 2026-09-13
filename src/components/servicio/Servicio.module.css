@@ -13,7 +13,7 @@
 
 .servicio:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(59, 43, 29, 0.16);
+    box-shadow: 0 12px 25px rgba(59, 29, 52, 0.16);
 }
 
 .nombre {
