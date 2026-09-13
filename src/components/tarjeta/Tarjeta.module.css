@@ -41,3 +41,18 @@
     color: #6B5845;
     font-size: 0.85rem;
 }
+
+.boton {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D4AF37;
+    color: #3B2B1D;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    opacity: 0.8;
+}

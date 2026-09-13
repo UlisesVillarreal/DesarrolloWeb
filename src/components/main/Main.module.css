@@ -4,6 +4,7 @@
     margin: 0 auto;
     padding: 50px 10px;
     background-color: #ecd9bf;
+    
 }
 
 .presentacion {
@@ -96,6 +97,43 @@
 
     display: block;
 
+}
+
+.botonVolver {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D4AF37;
+    color: #3B2B1D;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botonVolver:hover {
+    opacity: 0.8;
+}
+
+.controlesFiltros {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.controlesFiltros label {
+    color: #3B2B1D;
+    font-weight: bold;
+}
+
+.controlesFiltros select {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: 1px solid #CBB89A;
+    border-radius: 6px;
+    background-color: #F0E4CC;
+    color: #3B2B1D;
 }
 
 .controlesEstados {

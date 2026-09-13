@@ -1,0 +1,51 @@
+.servicio {
+    background-color: #F0E4CC;
+    border: 1px solid #CBB89A;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    min-height: 250px;
+
+    box-shadow: 0 8px 20px rgba(59, 43, 29, 0.10);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(59, 29, 52, 0.16);
+}
+
+.nombre {
+    color: #3B2B1D;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.categoria {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #FFFFFF;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.informacion {
+    border-top: 1px solid #CBB89A;
+    padding-top: 15px;
+}
+
+.informacion p {
+    color: #6B5845;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.informacion strong {
+    color: #3B2B1D;
+}

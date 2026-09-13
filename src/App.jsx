@@ -5,14 +5,17 @@ import Footer from './components/footer/Footer'
 import NavbarAdmin from './components/navbarAdmin/NavbarAdmin'
 
 function App() {
-  
 
   return (
-    <>
-      <NavbarAdmin/>
-      <Main/>
-      <Footer/>
-    </>
+    <div className="app">
+      <NavbarAdmin />
+
+      <main className="main">
+        <Main />
+      </main>
+
+      <Footer />
+    </div>
   )
 }
 
