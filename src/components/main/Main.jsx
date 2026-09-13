@@ -59,6 +59,7 @@ export default function Main() {
   
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todos")
   const [orden, setOrden] = useState("ninguno")
+  const [estadoPantalla, setEstadoPantalla] = useState("datos")
   const serviciosFiltrados = servicios.filter((servicio) => {
     if (categoriaSeleccionada === "Todos") {
       return true
@@ -74,6 +75,7 @@ export default function Main() {
     }
     return 0
   })
+  const hayResultados = serviciosOrdenados.length > 0
   return (
     <main className={estilos.contenido}>
       <section className={estilos.presentacion}>
@@ -102,6 +104,24 @@ export default function Main() {
         <h2 className={estilos.tituloTarjetas}>
           Modulos 
         </h2>
+        <div className={estilos.controlesEstados}>
+          <button onClick={() => setEstadoPantalla("cargando")}>
+            Cargando
+          </button>
+
+          <button onClick={() => setEstadoPantalla("datos")}>
+            Con datos
+          </button>
+
+          <button onClick={() => setEstadoPantalla("vacio")}>
+            Vacio
+          </button>
+
+          <button onClick={() => setEstadoPantalla("error")}>
+            Error
+          </button>
+        </div>
+      
         <div>
           <label>
             Categoria:
@@ -114,6 +134,7 @@ export default function Main() {
               <option value="Masaje">Masaje</option>
               <option value="Depilacion">Depilacion</option>
               <option value="corporal">Corporal</option>
+              <option value="Manicura">Manicura</option>
             </select>
           </label>
 
@@ -131,17 +152,31 @@ export default function Main() {
         </div>
 
         <div className={estilos.tarjetas}>
-          {serviciosOrdenados.map((servicio) => ( 
-            <Tarjeta
-              key={servicio.id}
-              nombre={servicio.nombre}
-              categoria={servicio.categoria}
-              precio={servicio.precio}
-              duracion={servicio.duracion}
-              estado={servicio.estado}
-            />
-          ))}
-
+          {estadoPantalla === "cargando" && ( 
+            <p>Cargando servicios...</p>
+            )}
+          {estadoPantalla === "error" && (
+            <p>Error al cargar los servicios.</p>
+            )}
+          {estadoPantalla === "vacio" && (
+            <p>No hay servicios disponibles.</p>
+            )}
+          {estadoPantalla === "datos" && (
+            hayResultados ? (
+              serviciosOrdenados.map((servicio) => (
+                <Tarjeta
+                  key={servicio.id}
+                  nombre={servicio.nombre}
+                  categoria={servicio.categoria}
+                  precio={servicio.precio}
+                  duracion={servicio.duracion}
+                  estado={servicio.estado}
+                />
+              ))
+            ) : (
+              <p>No se encontraron servicios con el filtro seleccionado</p>
+            )
+          )}
         </div>
 
 
