@@ -2,26 +2,37 @@ import React from 'react'
 import estilos from './Tarjeta.module.css'
 
 export default function Tarjeta({
-    nombre,
-    categoria,
-    precio,
-    duracion,
-    estado,
-    }) {
+    titulo,
+    descripcion,
+    estado = 'Pendiente',
+    principal = false,
+    onClick
+}) {
     return (
-        <article className={estilos.tarjeta}>
-        
-            <h3>{nombre}</h3>
+        <article className={`${estilos.tarjeta} ${principal ? estilos.destacada : ''}`}>
 
-            <p>{categoria}</p>
+            <h3>{titulo}</h3>
 
-            <p>Precio: ${precio}</p>
+            <p>{descripcion}</p>
 
-            <p>Duración: {duracion} minutos</p>     
-    
+            {principal && (
+                <span className={estilos.insignia}>
+                    Modulo central
+                </span>
+            )}
+
             <p className={estilos.estado}>
-                Estado: {estado ?? 'Sin Estado'}
+                Estado: {estado}
             </p>
+
+            {onClick && (
+                <button
+                    className={estilos.boton}
+                    onClick={onClick}
+                >
+                    Ver servicios
+                </button>
+            )}
 
         </article>
     )

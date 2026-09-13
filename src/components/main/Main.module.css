@@ -97,24 +97,3 @@
     display: block;
 
 }
-
-.controlesEstados {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.controlesEstados button {
-    padding: 10px 18px;
-    border: none;
-    border-radius: 8px;
-    background-color: #D4AF37;
-    color: #3B2B1D;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.controlesEstados button:hover {
-    opacity: 0.8;
-}
