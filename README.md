@@ -6,7 +6,7 @@
 
 - Amerise Román, Camila Belén 
 - Colque, Micaela Tania
-- Sánchez, Pablo 
+- Sánchez, Pablo
 - Suares, Marisa Sofía
 - Villarreal, Maximiliano Ulises
 
