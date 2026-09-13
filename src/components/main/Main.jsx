@@ -247,6 +247,10 @@ export default function Main() {
                 Corporal
               </option>
 
+              <option value="Manicura">
+                Manicura
+              </option>
+
             </select>
 
           </label>
