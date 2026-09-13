@@ -61,7 +61,7 @@ export default function Main() {
   const [orden, setOrden] = useState("ninguno")
   const [estadoPantalla, setEstadoPantalla] = useState("datos")
 
-  // FILTRO
+  
   const serviciosFiltrados = servicios.filter((servicio) => {
 
     if (categoriaSeleccionada === "Todos") {
@@ -71,8 +71,7 @@ export default function Main() {
     return servicio.categoria === categoriaSeleccionada
   })
 
-  // ORDENAMIENTO
-  // Se crea una copia para no modificar el array original
+  
   const serviciosOrdenados = [...serviciosFiltrados].sort((a, b) => {
 
     if (orden === "menor") {
@@ -91,14 +90,9 @@ export default function Main() {
   return (
   <main className={estilos.contenido}>
 
-    {/* =====================================
-        PANTALLA PRINCIPAL
-        ===================================== */}
 
     {pantalla === "inicio" && (
       <>
-
-        {/* PRESENTACIÓN */}
 
         <section className={estilos.presentacion}>
 
@@ -146,8 +140,6 @@ export default function Main() {
         </section>
 
 
-        {/* MÓDULOS */}
-
         <section className={estilos.seccionTarjetas}>
 
           <h2 className={estilos.tituloTarjetas}>
@@ -185,21 +177,16 @@ export default function Main() {
     )}
 
 
-    {/* =====================================
-        PANTALLA DE SERVICIOS
-        ===================================== */}
-
     {pantalla === "servicios" && (
 
       <section className={estilos.seccionTarjetas}>
 
-        {/* VOLVER */}
 
         <button
           className={estilos.botonVolver}
           onClick={() => setPantalla("inicio")}
         >
-          ← Volver a módulos
+            Volver a módulos
         </button>
 
 
@@ -207,8 +194,6 @@ export default function Main() {
           Servicios
         </h2>
 
-
-        {/* BOTONES DE ESTADOS */}
 
         <div className={estilos.controlesEstados}>
 
@@ -229,9 +214,6 @@ export default function Main() {
           </button>
 
         </div>
-
-
-        {/* FILTRO Y ORDENAMIENTO */}
 
         <div className={estilos.controlesFiltros}>
 
@@ -299,32 +281,23 @@ export default function Main() {
         </div>
 
 
-        {/* LISTADO DE SERVICIOS */}
-
         <div className={estilos.tarjetas}>
 
-          {/* CARGANDO */}
 
           {estadoPantalla === "cargando" && (
             <p>Cargando</p>
           )}
 
 
-          {/* ERROR */}
-
           {estadoPantalla === "error" && (
             <p>Con error</p>
           )}
 
 
-          {/* VACÍO */}
-
           {estadoPantalla === "vacio" && (
             <p>Vacío sin error</p>
           )}
 
-
-          {/* CON DATOS */}
 
           {estadoPantalla === "datos" && (
 
